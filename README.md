@@ -10,15 +10,15 @@
 
 ```
 <message> = <overhead> [ <sot> <body> <eot> ]
-<overhead> = <control code> [ <control args> ] [ <overhead> ]
+<overhead> = <control code> [ [ <spaces> ] <control args> [ <spaces> ] ] [ <overhead> ]
 <control code> = ( G | N | U | A | E | C | O | L | X )
-<control args> = ( any printable 7 bit ascii code except <control code>, can be surounded by whitespace )
+<control args> = ( any printable 7 bit ascii code except <control code> )
 <body> = ( any printable 7 bit ascii code except <eot> )
 ```
 
 example messages:
-- A frank O 181 <SOT> Hello, this is bob.<EOT>
-- GNU Terry Pratchet
-- O 181 C image/gif E base64 L 16 X 33ef2cde <SOT>ABeGgg287sj3823=<EOT>
+- `A frank O 181 <SOT> Hello, this is bob.<EOT>`
+- `GNU Terry Pratchet`
+- `O 181 Cimage/gifEbase64L16X 33ef2cde <SOT>ABeGgg287sj3823=<EOT>`
   
   
